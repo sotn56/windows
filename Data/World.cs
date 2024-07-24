@@ -1014,11 +1014,11 @@ namespace TerraMap.Data
             }
             if ((b2 & 4) == 4)
             {
-              tile.IsGreenWirePresent = true;
+              tile.IsBlueWirePresent = true;
             }
             if ((b2 & 8) == 8)
             {
-              tile.IsBlueWirePresent = true;
+              tile.IsGreenWirePresent = true;
             }
             b4 = (byte)((b2 & 112) >> 4);
             //if (b4 != 0 && this.SolidTiles[(int)tile.Type])
@@ -1892,6 +1892,8 @@ namespace TerraMap.Data
           tileHitTestInfo.Liquid = "Lava";
         else if (tile.IsLiquidHoney)
           tileHitTestInfo.Liquid = "Honey";
+        else if (tile.Shimmer)
+          tileHitTestInfo.Liquid = "Shimmer";
         else
           tileHitTestInfo.Liquid = "Water";
       }
