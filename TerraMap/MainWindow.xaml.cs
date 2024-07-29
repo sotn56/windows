@@ -1276,19 +1276,9 @@ namespace TerraMap
       await this.UpdateFog();
     }
 
-    private void OnWorldsSubmenuOpened(object sender, RoutedEventArgs e)
-    {
-      this.LoadWorldFiles();
-    }
-
     private void OnWorldsDropDownOpened(object sender, EventArgs e)
     {
       this.LoadWorldFiles();
-    }
-
-    private void OnMapsDropDownOpened(object sender, EventArgs e)
-    {
-      this.LoadMapFiles();
     }
 
     private async void OnToggleIsHighlighting(object sender, RoutedEventArgs e)

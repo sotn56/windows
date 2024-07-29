@@ -122,7 +122,7 @@
             </Style>
           </MenuItem.Resources>
         </MenuItem>
-        <MenuItem Header="Open _Player" ItemsSource="{Binding MapFiles}" SubmenuOpened="OnMapsDropDownOpened">
+        <MenuItem Header="Open _Player" ItemsSource="{Binding MapFiles}">
           <MenuItem.ItemTemplate>
             <DataTemplate>
               <TextBlock Text="{Binding Name}" ToolTip="{Binding FileInfo.FullName}" />
@@ -287,7 +287,7 @@
         </ComboBox>
         <TextBlock VerticalAlignment="Center">Players:</TextBlock>
         <ComboBox ItemsSource="{Binding MapFiles}" SelectedItem="{Binding SelectedMapFile}" 
-					SelectionChanged="OnSelectedMapFileChanged" DropDownOpened="OnMapsDropDownOpened">
+					SelectionChanged="OnSelectedMapFileChanged">
           <ComboBox.ItemTemplate>
             <DataTemplate>
               <StackPanel Orientation="Horizontal">
